@@ -1,24 +1,10 @@
-# README
+# Simple Board
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+シンプルな掲示板です。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- できること
+  - 記事の投稿
+  - コメント
+  - いいね
+  - ランキング
+  - 記事の検索
