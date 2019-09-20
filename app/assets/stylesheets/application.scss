@@ -1,0 +1,42 @@
+@mixin link {
+  text-decoration: none;
+  color: #444444;
+  &:hover{
+    color: white;
+  }
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+header {
+	height: 80px;
+	width: 100%;
+	background-color: teal;
+  #logo {
+  	line-height: 80px;
+  	float: left;
+  	font-size: 30px;
+  	margin-left: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    a {
+      @include link;
+    }
+  }
+  nav {
+  	float: left;
+  	margin-left: 800px;
+    li {
+    	line-height: 50px;
+    	float: left;
+    	margin-left: 30px;
+    	list-style: none;
+      a {
+        @include link;
+      }
+    }
+  }
+}
