@@ -10,7 +10,7 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'slim-rails'
 gem 'html2slim'
-
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
