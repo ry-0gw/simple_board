@@ -1,14 +1,19 @@
 @mixin link {
   text-decoration: none;
-  color: #444444;
+  color: #444;
   &:hover{
     color: white;
   }
 }
 
+.debug_dump {
+  margin-top: 100px;
+}
+
 body{
   padding: 0;
   margin: 0;
+  background-color: lightblue;
 }
 
 header {
@@ -39,4 +44,64 @@ header {
       }
     }
   }
+}
+
+.title-name{
+  margin-left: 80px;
+  font-size: 30px;
+  color: #666;
+}
+
+table{
+  margin-left: 80px;
+  color: #666;
+  th{
+    border: 3px solid #666;
+  }
+  td{
+    padding-left: 20px;
+    font-size: 20px;
+  }
+}
+
+form{
+  color: #666;
+  margin-left: 40px;
+  li{
+    list-style: none;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .form-field{
+    width: 200px;
+    height: 20px;
+  }
+
+}
+
+.button{
+  background-color: white;
+  color: #666;
+  font-size: large;
+  width: 210px;
+  margin-top: 20px;
+}
+
+.error{
+  color: red;
+  margin-left: 40px;
+}
+
+.alert{
+  margin-top:20px;
+  margin-left: 80px;
+  font-size: 20px;
+}
+
+.alert-success{
+  color: green;
+}
+
+.alert-danger{
+  color: red;
 }
