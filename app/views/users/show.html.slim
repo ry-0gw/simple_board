@@ -1,0 +1,9 @@
+h1.title-name プロフィール
+
+table
+  tr
+    th= User.human_attribute_name(:name)
+    td= @user.name
+  tr
+    th= User.human_attribute_name(:email)
+    td= @user.email
