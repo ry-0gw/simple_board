@@ -33,7 +33,12 @@ header {
   }
   nav {
   	float: left;
-  	margin-left: 800px;
+    .nav-list-3{
+      margin-left: 650px;
+    }
+    .nav-list-2{
+      margin-left: 800px;
+    }
     li {
     	line-height: 50px;
     	float: left;
