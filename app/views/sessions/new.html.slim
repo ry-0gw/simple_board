@@ -1,0 +1,15 @@
+h1.title-name ログイン
+
+.form
+  = form_for(:session, url: login_path) do |f|
+    ul
+      li
+        = f.label :email, 'メールアドレス'
+      li
+        = f.email_field :email, class: "form-field"
+      li
+        = f.label :password, 'パスワード'
+      li
+        = f.password_field :password, class: "form-field"
+      li
+        = f.submit "ログインする", class: "button"
