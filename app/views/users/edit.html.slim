@@ -1,7 +1,7 @@
-h1.title-name 新規登録
+h1.title-name ユーザー編集
 
 .form
-  = form_for(@user, url: signup_path) do |f|
+  = form_for(@user) do |f|
     = render 'shared/error_messages'
     ul
       li

@@ -33,6 +33,9 @@ header {
   }
   nav {
   	float: left;
+    .nav-admin{
+      margin-left: 520px;
+    }
     .nav-list-3{
       margin-left: 650px;
     }
@@ -59,13 +62,18 @@ header {
 
 table{
   margin-left: 80px;
-  color: #666;
+  color: #444;
+  align: center;
   th{
-    border: 3px solid #666;
+    border: 3px solid teal;
+    color: teal;
   }
   td{
-    padding-left: 20px;
     font-size: 20px;
+    border: 3px solid #666;
+    a {
+      @include link;
+    }
   }
 }
 
@@ -109,4 +117,27 @@ form{
 
 .alert-danger{
   color: red;
+}
+
+.users{
+  margin-left: 60px;
+  td{
+    padding: center;
+    border: 3px solid #666;
+  }
+}
+
+.pagination{
+  margin-left: 20px;
+  display: table;
+  li{
+    list-style: none;
+    display: table-cell;
+    border-left: 1px solid black;
+    padding: 0 10px;
+    a{
+      color: #444;
+      text-decoration: none;
+    }
+  }
 }

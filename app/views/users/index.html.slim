@@ -1,1 +1,16 @@
-h1 index
+h1.title-name ユーザー管理
+
+= will_paginate
+
+table
+    tr
+      th= User.human_attribute_name(:name)
+      th= User.human_attribute_name(:email)
+      th 削除
+    - @users.each do |user|
+      tr
+        td= link_to user.name, user
+        td= user.email
+        td= link_to "削除", user, method: :delete, data: { confirm: "本当にこのユーザーを削除しますか？"}
+
+= will_paginate

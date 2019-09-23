@@ -18,6 +18,9 @@ ja:
         password_confirmation: パスワード（確認）
         created_at: 登録日時
         updated_at: 更新日時
+  will_paginate:
+    previous_label: 前へ
+    next_label: 次へ
   date:
     abbr_day_names:
     - 日
