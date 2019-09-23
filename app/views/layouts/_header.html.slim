@@ -2,11 +2,14 @@ header
   #logo= link_to "simple board", "#"
   nav
     - if logged_in?
-      ul.nav-list-3
+        -if admin_user?
+          ul.nav-admin
+            li= link_to "ユーザー管理", users_path
+        ul.nav-list-3
           li= link_to "プロフィール", current_user
-          li= link_to "ユーザー設定", '#'
+          li= link_to "ユーザー設定", edit_user_path(current_user)
           li= link_to "ログアウト", logout_path, method: :delete
     - else
       ul.nav-list-2
-          li= link_to "ログイン", login_path
-          li= link_to "新規登録", signup_path
+        li= link_to "ログイン", login_path
+        li= link_to "新規登録", signup_path

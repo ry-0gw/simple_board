@@ -42,6 +42,8 @@ GEM
     arel (8.0.0)
     bcrypt (3.1.12)
     bindex (0.8.1)
+    bootstrap-will_paginate (1.0.0)
+      will_paginate
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.2)
@@ -56,6 +58,8 @@ GEM
     crass (1.0.4)
     erubi (1.8.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.11.1)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -76,7 +80,7 @@ GEM
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
-    i18n (1.6.0)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -207,14 +211,17 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.1.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bcrypt (= 3.1.12)
+  bootstrap-will_paginate (= 1.0.0)
   byebug (= 9.0.6)
   coffee-rails (= 4.2.2)
+  faker (= 1.7.3)
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
   html2slim
@@ -236,6 +243,7 @@ DEPENDENCIES
   turbolinks (= 5.0.1)
   uglifier (= 3.2.0)
   web-console (= 3.5.1)
+  will_paginate (= 3.1.6)
 
 BUNDLED WITH
    2.0.2
