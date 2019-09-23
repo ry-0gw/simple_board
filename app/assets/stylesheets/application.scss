@@ -71,6 +71,9 @@ table{
     a {
       @include link;
     }
+    .delete{
+      color: red;
+    }
   }
 }
 

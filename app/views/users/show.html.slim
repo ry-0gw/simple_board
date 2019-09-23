@@ -11,11 +11,16 @@ table
         tr
           th= Topic.human_attribute_name(:title)
           th 作成日時
-          th 削除
-        - @topics.each do |topic|
-          tr
-            td= link_to topic.title, '#'
-            td= time_ago_in_words(topic.created_at)+"前"
-            td= link_to "削除", topic, method: :delete, data: { confirm: "本当にこのトピックを削除しますか？"}
-
+        - if @user == current_user
+          - @topics.each do |topic|
+            tr
+              td= link_to topic.title, '#'
+              td= time_ago_in_words(topic.created_at)+"前"
+              td= link_to "削除", topic, class: 'delete', method: :delete, data: { confirm: "本当にこのトピックを削除しますか？"}
+        - else
+          - @topics.each do |topic|
+            tr
+              td= link_to topic.title, '#'
+              td= time_ago_in_words(topic.created_at)+"前"
+            
         = will_paginate @topics
