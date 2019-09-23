@@ -13,3 +13,9 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password)
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+  title = Faker::Lorem.characters(16)
+  users.each { |user| user.topics.create!(title: title) }
+end

@@ -1,4 +1,4 @@
-- if @user.errors.any?
+- if model.errors.any?
   ul
-  - @user.errors.full_messages.each do |msg|
+  - model.errors.full_messages.each do |msg|
     li.error= msg

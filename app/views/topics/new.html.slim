@@ -1,0 +1,12 @@
+h1.title-name トピック作成
+
+.form
+  = form_for(@topic) do |f|
+    = render 'shared/error_messages', model: f.object
+    ul
+      li
+        = f.label :title
+      li
+        = f.text_field :title, class: "form-field"
+      li
+        = f.submit "作成する", class: "button"

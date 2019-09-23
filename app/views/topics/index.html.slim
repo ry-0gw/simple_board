@@ -1,0 +1,14 @@
+h1.title-name トピック一覧
+
+table
+  tr
+    th= Topic.human_attribute_name(:title)
+    th 作成者
+    th 作成日時
+  - @topics.each do |topic|
+    tr
+      td= link_to topic.title, '#'
+      td= link_to topic.user.name, topic.user
+      td= time_ago_in_words(topic.created_at)+"前"
+
+  = will_paginate

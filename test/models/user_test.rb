@@ -73,4 +73,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "associated topics should be destroyed" do
+    @user.save
+    @user.topics.create!(title: "Test topic")
+    assert_difference 'Topic.count', -1 do
+      @user.destroy
+    end
+  end
 end

@@ -1,15 +1,18 @@
 header
-  #logo= link_to "simple board", "#"
+  #logo= link_to "simple board", root_path
   nav
     - if logged_in?
         -if admin_user?
           ul.nav-admin
             li= link_to "ユーザー管理", users_path
-        ul.nav-list-3
+        ul.nav-list-5
+          li= link_to "トピック作成", new_topic_path
+          li= link_to "トピック一覧", root_path
           li= link_to "プロフィール", current_user
           li= link_to "ユーザー設定", edit_user_path(current_user)
           li= link_to "ログアウト", logout_path, method: :delete
     - else
-      ul.nav-list-2
+      ul.nav-list-3
+        li= link_to "トピック一覧", root_path
         li= link_to "ログイン", login_path
         li= link_to "新規登録", signup_path
