@@ -3,15 +3,17 @@ h1.title-name プロフィール
 table
     tr
       th= User.human_attribute_name(:name)
-      th= User.human_attribute_name(:email)
+      - if current_user?(@user)
+        th= User.human_attribute_name(:email)
     tr
       td= @user.name
-      td= @user.email
+      - if current_user?(@user)
+        td= @user.email
       - if @topics.any?
         tr
           th= Topic.human_attribute_name(:title)
           th 作成日時
-        - if @user == current_user
+        - if current_user?(@user)
           - @topics.each do |topic|
             tr
               td= link_to topic.title, '#'
@@ -22,5 +24,5 @@ table
             tr
               td= link_to topic.title, '#'
               td= time_ago_in_words(topic.created_at)+"前"
-            
+
         = will_paginate @topics
