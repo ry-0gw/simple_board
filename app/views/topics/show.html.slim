@@ -1,0 +1,26 @@
+h1.title-name= @topic.title
+
+table
+  - unless @posts.blank?
+    tr
+      th= Post.human_attribute_name(:body)
+      th 投稿者
+      th 投稿日時
+  - @posts.each do |post|
+    tr
+      td= simple_format(post.body)
+      td= link_to post.user.name, post.user
+      - unless post.created_at.nil?
+        td= time_ago_in_words(post.created_at)+"前"
+
+.form
+  = form_for(@post, url: topic_posts_path(@topic)) do |f|
+    = render 'shared/error_messages', model: f.object
+    ul
+      li
+        = f.label :body
+      li
+        = f.text_area :body, class: "form-field"
+      li
+        = hidden_field_tag :topic_id, @topic.id
+        = f.submit "投稿する", class: "button"

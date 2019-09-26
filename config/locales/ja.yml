@@ -10,6 +10,7 @@ ja:
     models:
       user: ユーザー
       topic: トピック
+      post: 投稿
     attributes:
       user:
         id: ユーザーID
@@ -21,6 +22,8 @@ ja:
         updated_at: 更新日時
       topic:
         title: トピック名
+      post:
+        body: 投稿
   will_paginate:
     previous_label: 前へ
     next_label: 次へ

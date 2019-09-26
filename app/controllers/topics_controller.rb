@@ -10,6 +10,12 @@ class TopicsController < ApplicationController
     @topics = Topic.paginate(page: params[:page])
   end
 
+  def show
+    @topic = Topic.find(params[:id])
+    @post = Post.new
+    @posts = @topic.posts
+  end
+
   def create
     @topic = current_user.topics.build(topic_params)
     if @topic.save

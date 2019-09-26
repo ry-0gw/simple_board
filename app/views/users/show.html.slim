@@ -16,13 +16,13 @@ table
         - if current_user?(@user)
           - @topics.each do |topic|
             tr
-              td= link_to topic.title, '#'
+              td= link_to topic.title, topic
               td= time_ago_in_words(topic.created_at)+"前"
               td= link_to "削除", topic, class: 'delete', method: :delete, data: { confirm: "本当にこのトピックを削除しますか？"}
         - else
           - @topics.each do |topic|
             tr
-              td= link_to topic.title, '#'
+              td= link_to topic.title, topic
               td= time_ago_in_words(topic.created_at)+"前"
 
         = will_paginate @topics
