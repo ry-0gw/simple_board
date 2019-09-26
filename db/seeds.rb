@@ -19,3 +19,10 @@ users = User.order(:created_at).take(6)
   title = Faker::Lorem.characters(16)
   users.each { |user| user.topics.create!(title: title) }
 end
+
+user = User.first
+topics = Topic.order(:created_at).take(6)
+50.times do
+  body = Faker::Lorem.characters(16)
+  topics.each { |topic| topic.posts.create!(body: body, user_id: user.id) }
+end
